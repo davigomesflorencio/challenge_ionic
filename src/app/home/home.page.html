@@ -9,42 +9,51 @@
 <ion-content [fullscreen]="true">
   <!-- <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Desafio</ion-title>
+      <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header> -->
+
+  <!-- <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer"
+        href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div> -->
   <ion-card>
     <ion-card-content>
       <!-- <div id="container"> -->
       <form [formGroup]="formD" (ngSubmit)="onSubmit()">
+
         <ion-item>
           <ion-label position="floating">Nome</ion-label>
           <ion-input type="text" name="nome" formControlName="nome" required></ion-input>
         </ion-item>
-        <div *ngIf="fields.nome.errors" class="alert-danger">
-          <div *ngIf="fields.nome.errors.required">Por fovar digite seu nome</div>
-        </div>
+        <!-- <div *ngIf="fields['nome'].errors" class="alert-danger">
+          <div *ngIf="fields['nome'].errors['required']">Por fovar digite seu nome</div>
+        </div> -->
         <ion-item>
           <ion-label position="floating">Email</ion-label>
           <ion-input type="email" name="email" formControlName="email" required></ion-input>
         </ion-item>
-        <div *ngIf="fields.email.errors" class="alert-danger">
-          <div *ngIf="fields.email.errors.required">Por fovar digite seu email</div>
-          <div *ngIf="fields.email.errors.email">Por favor digite um email valido!</div>
-        </div>
+        <!-- <div *ngIf="fields['email'].errors" class="alert-danger">
+          <div *ngIf="fields['email'].errors['required']">Por fovar digite seu email</div>
+          <div *ngIf="fields['email'].errors['email']">Por favor digite um email valido!</div>
+        </div> -->
 
-        <ion-item>
+        <!-- <ion-item>
           <ion-label position="floating">Telefone</ion-label>
           <ion-input name="telefone" name="telefone" type="tel" formControlName="telefone" required></ion-input>
-        </ion-item>
-        <div *ngIf="fields.telefone.errors" class="alert-danger">
-          <div *ngIf="fields.telefone.errors.required">Por favor digite seu telefone!</div>
-          <div *ngIf="fields.telefone.errors.pattern">Formato invalido! Exemplo : (99)91234-4567</div>
-        </div>
+        </ion-item> -->
+        <!-- <div *ngIf="fields['telefone'].errors" class="alert-danger">
+          <div *ngIf="fields['telefone'].errors['required']">Por favor digite seu telefone!</div>
+          <div *ngIf="fields['telefone'].errors['pattern']">Formato invalido! Exemplo : (99)91234-4567</div>
+        </div> -->
+
         <ion-button class="bt" expand="block" [disabled]="!formD.valid" type="submit">Enviar</ion-button>
-       
+
       </form>
       <!-- </div> -->
 
     </ion-card-content>
   </ion-card>
+
 </ion-content>
